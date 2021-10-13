@@ -1,7 +1,7 @@
 # Build images
-docker build -t vianabcc/multi-client:latest -f vianabcc/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t vianabcc/multi-server:latest -f vianabcc/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t vianabcc/multi-worker:latest -f vianabcc/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t vianabcc/multi-client:latest -t vianabcc/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t vianabcc/multi-server:latest -t vianabcc/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t vianabcc/multi-worker:latest -t vianabcc/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 # Push images to Dockerhub
 docker push vianabcc/multi-client:latest 
